@@ -101,7 +101,7 @@
     combos {
     compatible = "zmk,combos";
     // layer toggle
-    COMBO(npad,   &tog RSE, 28 31)
+    COMBO(nlock,   &tog RSE, 28 31)
     COMBO(caps,   &kp CAPS, 25 34)
     // vim shortcuts
     // invoke macros
