@@ -1,0 +1,11 @@
+manifest:
+  remotes:
+    - name: HeavyDutySoul
+      url-base: https://github.com/HeavyDutySoul
+  projects:
+    - name: zmk
+      remote: HavyDutySoul
+      revision: main
+      import: app/west.yml
+  self:
+    path: config
