@@ -4,7 +4,7 @@ manifest:
       url-base: https://github.com/HeavyDutySoul
   projects:
     - name: zmk
-      remote: HavyDutySoul
+      remote: HeavyDutySoul
       revision: main
       import: app/west.yml
   self:
