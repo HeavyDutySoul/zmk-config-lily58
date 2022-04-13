@@ -50,7 +50,7 @@ jobs:
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-lily58-left
         with:
-          args: 'build "--pristine -s zmk/app -b nrfmicro_13 -- -DSHIELD=lily58_left -DZMK_CONFIG=/github/workspace/config"'
+          args: 'build "--pristine -s zmk/app -b nrfmicro_13 -- -DSHIELD=lily58_left -DZMK_CONFIG=/github/workspace/config/lily58"'
       - name: Rename split (Lily58 Left)
         run: sudo mv build/zephyr/zmk.uf2 build/zephyr/zmk_lily58_left.uf2
       - name: Archive (Lily58 Left)
@@ -62,7 +62,7 @@ jobs:
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-lily58-right
         with:
-          args: 'build "--pristine -s zmk/app -b nrfmicro_13 -- -DSHIELD=lily58_right -DZMK_CONFIG=/github/workspace/config"'
+          args: 'build "--pristine -s zmk/app -b nrfmicro_13 -- -DSHIELD=lily58_right -DZMK_CONFIG=/github/workspace/config/lily58"'
       - name: Rename split (Lily58 Right)
         run: sudo mv build/zephyr/zmk.uf2 build/zephyr/zmk_lily58_right.uf2
       - name: Archive (Lily58 Right)
