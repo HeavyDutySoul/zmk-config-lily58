@@ -12,7 +12,7 @@
 &kscan0 {
     debounce-press-ms = <3>;
     debounce-release-ms = <3>;
-    debounce-scan-period-ms = <20>;
+    debounce-scan-period-ms = <10>;
 };
 
 &mt {
