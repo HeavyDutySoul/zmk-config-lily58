@@ -12,7 +12,7 @@
 &kscan0 {
     debounce-press-ms = <3>;
     debounce-release-ms = <3>;
-    debounce-scan-period-ms = <10>;
+    debounce-scan-period-ms = <20>;
 };
 
 &mt {
@@ -102,6 +102,7 @@
     compatible = "zmk,combos";
     // layer toggle
     COMBO(npad,   &tog RSE, 28 31)
+    COMBO(caps,   &kp CAPS, 25 34)
     // vim shortcuts
     // invoke macros
     COMBO(f12,    &kp F12, 28 11)
