@@ -15,6 +15,8 @@
 #define Z_MUT  &kp C_MUTE
 #define CPW    &caps_word
 #define OUT_T  &out OUT_TOG
+#define OUT_U  &out OUT_USB
+#define OUT_B  &out OUT_BLE
 #define ESCT   &mt TILD ESC
 #define FN1    &mt F1 N1
 #define FN2    &mt F2 N2
