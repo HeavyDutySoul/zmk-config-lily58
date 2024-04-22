@@ -2,12 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    - name: zhiayang
+      url-base: https://github.com/zhiayang
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: "pull/1946/head:mikoto_7_1_0"
+      revision: main
       import: app/west.yml
+    - name: zmk
+      remote: zhiayang
+      revision: mikoto_7_1_0
   self:
     path: config
