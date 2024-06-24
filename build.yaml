@@ -24,9 +24,4 @@ include:
     shield: lily58_right
 
   - board: mikoto@6.1
-    shield: lily58_left
-    snippet: zmk-usb-logging
-    artifact-name: lily58_left_with_logging
-
-  - board: mikoto@6.1
     shield: settings_reset
