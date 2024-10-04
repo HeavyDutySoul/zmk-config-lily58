@@ -79,6 +79,10 @@
     };
 };
 
+&zephyr_udc0: &usbd {
+    status = "okay";
+};
+
 &flash0 {
         /*
         * For more information, see:
