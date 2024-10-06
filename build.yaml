@@ -1,9 +1,12 @@
+board: [ "mikoto@6.1" ]
+shield: [ "lily58_left", "lily58_right" ]
 include:
   - board: mikoto@6.1
     shield: lily58_left
-	
+	artifact-name: lily58_left_mikoto_zmk
   - board: mikoto@6.1
     shield: lily58_right
-
+	artifact-name: lily58_right_mikoto_zmk
   - board: mikoto@6.1
     shield: settings_reset
+	artifact-name: lily58_reset_mikoto_zmk
