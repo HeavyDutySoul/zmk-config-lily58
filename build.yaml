@@ -1,2 +1,29 @@
-board: [ "mikoto@6.1" ]
-shield: [ "lily58_left", "lily58_right", "settings_reset" ]
+# This file generates the GitHub Actions matrix.
+# For simple board + shield combinations, add them to the top level board and
+# shield arrays, for more control, add individual board + shield combinations
+# to the `include` property. You can also use the `cmake-args` property to
+# pass flags to the build command and `artifact-name` to assign a name to
+# distinguish build outputs from each other:
+#
+# board: [ "nice_nano_v2" ]
+# shield: [ "corne_left", "corne_right" ]
+# include:
+#   - board: bdn9_rev2
+#   - board: nice_nano_v2
+#     shield: reviung41
+#   - board: nice_nano_v2
+#     shield: corne_left
+#     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+#     artifact-name: corne_left_with_logging
+#
+---
+include:
+  - board: mikoto@6.1
+    shield: lily58_left
+    artifact-name: lily58_left_mikoto_zmk
+  - board: mikoto@6.1
+    shield: lily58_right
+    artifact-name: lily58_right_mikoto_zmk
+  - board: mikoto@6.1
+    shield: settings_reset
+    artifact-name: lily58_settings_reset
