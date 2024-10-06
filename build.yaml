@@ -1,2 +1,2 @@
 board: [ "mikoto@6.1" ]
-shield: [ "lily58_left", "lily58_right" ]
+shield: [ "lily58_left", "lily58_right", "settings_reset" ]
