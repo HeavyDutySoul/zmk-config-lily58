@@ -20,10 +20,13 @@
 include:
   - board: mikoto@6.1
     shield: lily58_left
+    snippet: nrf52840-nosd
     artifact-name: lily58_left_mikoto_zmk
   - board: mikoto@6.1
     shield: lily58_right
+    snippet: nrf52840-nosd
     artifact-name: lily58_right_mikoto_zmk
   - board: mikoto@6.1
     shield: settings_reset
+    snippet: nrf52840-nosd
     artifact-name: lily58_settings_reset
