@@ -20,18 +20,19 @@
 include:
   - board: nrf52840dongle_nrf52840
     shield: lily58_dongle
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    #snippet: studio-rpc-usb-uart
+    #cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    artifact-name: lily58_dongle_zmk
   - board: mikoto@6.1
     shield: lily58_left
     snippet: nrf52840-nosd
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    artifact-name: lily58_left_mikoto_zmk    
+    artifact-name: lily58_left_zmk    
   - board: mikoto@6.1
     shield: lily58_right
     snippet: nrf52840-nosd
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    artifact-name: lily58_right_mikoto_zmk
+    artifact-name: lily58_right_zmk
   - board: mikoto@6.1
     shield: settings_reset
     snippet: nrf52840-nosd
