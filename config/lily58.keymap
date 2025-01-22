@@ -10,13 +10,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "lily58.h"
 
-/*&kscan0 {
-    debounce-press-ms = <3>;
-    debounce-release-ms = <3>;
-    debounce-scan-period-ms = <10>;
-};
-*/
-
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <400>;
