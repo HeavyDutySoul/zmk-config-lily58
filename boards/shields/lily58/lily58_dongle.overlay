@@ -7,6 +7,10 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/kata0510/lily58.dtsi>
 
+&kata0510_lily58_layout {
+    transform = <&default_transform>;
+};
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
