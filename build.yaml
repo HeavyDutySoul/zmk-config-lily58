@@ -37,3 +37,6 @@ include:
     shield: settings_reset
     snippet: nrf52840-nosd
     artifact-name: lily58_settings_reset
+  - board: nrf52840dongle_nrf52840
+    shield: settings_reset
+    artifact-name: lily58_dongle_settings_reset
