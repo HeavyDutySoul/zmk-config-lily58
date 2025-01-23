@@ -15,10 +15,4 @@ config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
 
 config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
     default y
-
-config ZMK_BLE
-  default y
-
-#config ZMK_USB
-#  default y
 endif
