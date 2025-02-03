@@ -20,7 +20,8 @@
 include:
   - board: nrf52840dongle_nrf52840
     shield: lily58_dongle
-    snippet: nrf52840-nosd
+    snippet: nrf52840-nosd studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: lily58_dongle_zmk
   - board: mikoto@6.1
     shield: lily58_left_central
