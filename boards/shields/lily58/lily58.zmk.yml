@@ -1,0 +1,16 @@
+file_format: "1"
+id: lily58
+name: Lily58
+type: shield
+url: https://github.com/kata0510/Lily58
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - studio
+siblings:
+  - lily58_dongle
+  - lily58_left_central
+  - lily58_left_peripheral
+  - lily58_right_peripheral
