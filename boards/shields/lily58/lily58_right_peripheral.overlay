@@ -11,6 +11,7 @@
 };
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
+    wakeup-source;
 
     col-gpios
         = <&pro_micro 10 GPIO_ACTIVE_HIGH>
