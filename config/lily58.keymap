@@ -7,14 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 #include "lily58.h"
-
-&kscan0 {
-    debounce-press-ms = <3>;
-    debounce-release-ms = <3>;
-    debounce-scan-period-ms = <10>;
-};
 
 &mt {
     flavor = "tap-preferred";
@@ -95,7 +88,7 @@
 //                ┌──[0]───┬──[1]───┬──[2]───┬──[3]───┬──[4]───┬──[5]───┐                      ┌──[6]───┬──[7]───┬──[8]───┬──[9]───┬──[10]──┬──[11]──┐
                     ______   Z_BT_0   Z_BT_1   Z_BT_2   Z_BT_3   Z_BT_4                          Z_VUP    XXXXXX   XXXXXX   XXXXXX   XXXXXX   XXXXXX
 //                ├──[12]──┼──[13]──┼──[14]──┼──[15]──┼──[16]──┼──[17]──┤                      ├──[18]──┼──[19]──┼──[20]──┼──[21]──┼──[22]──┼──[23]──┤
-                    ______   ______   ______   ______   OUT_T    Z_BT_C                          Z_VDN   &kp HOME  &kp UP  &kp END  &kp PGUP &kp BSLH
+                    ______   ______   ______   ______   ______   Z_BT_C                          Z_VDN   &kp HOME  &kp UP  &kp END  &kp PGUP &kp BSLH
 //                ├──[24]──┼──[25]──┼──[26]──┼──[27]──┼──[28]──┼──[29]──┤                      ├──[30]──┼──[31]──┼──[32]──┼──[33]──┼──[34]──┼──[35]──┤
                     ______   ______   ______   ______   ______   ______                          Z_MUT   &kp LEFT &kp DOWN &kp RIGHT &kp PGDN ______
 //                ├──[36]──┼──[37]──┼──[38]──┼──[39]──┼──[40]──┼──[41]──┼──[52]──┐    ┌──[53]──┼──[42]──┼──[43]──┼──[44]──┼──[45]──┼──[46]──┼──[47]──┤

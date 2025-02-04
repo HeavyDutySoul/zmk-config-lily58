@@ -24,7 +24,7 @@
 #define EP_T   &ext_power EP_TOG
 #define EP_ON  &ext_power EP_ON
 #define EP_OF  &ext_power EP_OFF
-#define ESCT   &mt TILD ESC
+#define ESCT   &mt GRAVE ESC
 #define BRKTR  &mt RPAR RBKT
 #define BRKTL  &mt LPAR LBKT
 #define FN1    &mt F1 N1
