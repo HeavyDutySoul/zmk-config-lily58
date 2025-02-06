@@ -4,8 +4,8 @@
 config SHIELD_LILY58_DONGLE
     def_bool $(shields_list_contains,lily58_dongle)
 
-#config SHIELD_LILY58_LEFT_CENTRAL
-#    def_bool $(shields_list_contains,lily58_left_central)
+config SHIELD_LILY58_LEFT_CENTRAL
+    def_bool $(shields_list_contains,lily58_left_central)
 
 config SHIELD_LILY58_LEFT_PERIPHERAL
     def_bool $(shields_list_contains,lily58_left_peripheral)
