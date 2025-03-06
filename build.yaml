@@ -26,16 +26,17 @@ include:
   - board: mikoto@6.1
     shield: lily58_left_central
     snippet: nrf52840-nosd
+    cmake-args: -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
     artifact-name: lily58_left_central_zmk
   - board: mikoto@6.1
     shield: lily58_left_peripheral
     snippet: nrf52840-nosd
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
     artifact-name: lily58_left_peripheral_zmk   
   - board: mikoto@6.1
     shield: lily58_right_peripheral
     snippet: nrf52840-nosd
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
     artifact-name: lily58_right_peripheral_zmk
   - board: mikoto@6.1
     shield: settings_reset
