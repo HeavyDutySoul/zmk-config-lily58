@@ -22,10 +22,12 @@ include:
     shield: lily58_left
     snippet: nrf52840-nosd
     artifact-name: lily58_left_mikoto_zmk
+    cmake-args: -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
   - board: mikoto@6.1
     shield: lily58_right
     snippet: nrf52840-nosd
     artifact-name: lily58_right_mikoto_zmk
+    cmake-args: -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
   - board: mikoto@6.1
     shield: settings_reset
     snippet: nrf52840-nosd
