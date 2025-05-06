@@ -40,18 +40,8 @@
 		};
 	};
 
-	buttons {
-		compatible = "gpio-keys";
-		button0: button_0 {
-			gpios = <&gpio0 18 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-			label = "Push button switch 0";
-			zephyr,code = <INPUT_KEY_0>;
-		};
-	};
-
 	/* These aliases are provided for compatibility with samples */
 	aliases {
-		sw0 = &button0;
 		led0 = &led0_green;
 		led1 = &led1_red;
 		led2 = &led1_green;
@@ -60,8 +50,6 @@
 		led1-red   = &led1_red;
 		led1-green = &led1_green;
 		led1-blue  = &led1_blue;
-		mcuboot-button0 = &button0;
-		mcuboot-led0 = &led0_green;
 		watchdog0 = &wdt0;
 	};
 };
