@@ -74,11 +74,6 @@
 	status = "okay";
 };
 
-&uicr {
-	nfct-pins-as-gpios;
-	gpio-as-nreset;
-};
-
 &gpio0 {
 	status = "okay";
 };
