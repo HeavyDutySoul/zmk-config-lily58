@@ -20,7 +20,7 @@
 include:
   - board: nrf52840dongle_nrf52840
     shield: lily58_dongle
-    snippet: nrf52840-nosd studio-rpc-usb-uart battery_report_test
+    snippet: nrf52840-nosd studio-rpc-usb-uart battery_reporting_test
     artifact-name: lily58_dongle_zmk
   - board: nrf52840dongle_nrf52840
     shield: lily58_dongle
