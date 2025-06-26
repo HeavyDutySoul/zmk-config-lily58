@@ -36,6 +36,7 @@
     led1_blue: led_3 {
       gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
       label = "Blue LED 1";
+    };
   };
 
   buttons {
