@@ -5,7 +5,8 @@ manifest:
   projects:
     - name: zmk
       remote: Genteure
-      revision: feat/battery-reporting@5248ed5
+      repo-path: tree/feat/battery-reporting
+      revision: 5248ed5
       import: app/west.yml
   self:
     path: config
