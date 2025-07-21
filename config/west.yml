@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: HeavyDutySoul
-      url-base: https://github.com/HeavyDutySoul
+    - name: Genteure
+      url-base: https://github.com/Genteure
   projects:
     - name: zmk
-      remote: HeavyDutySoul
+      remote: Genteure
       revision: feat/battery-reporting
       import: app/west.yml
   self:
