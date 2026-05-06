@@ -4,7 +4,6 @@
 #define ADJ 3
 
 #define Z_BOOT &bootloader
-//#define Z_OFF  &soft_off
 #define Z_BT_0 &bt BT_SEL 0
 #define Z_BT_1 &bt BT_SEL 1
 #define Z_BT_2 &bt BT_SEL 2
@@ -24,7 +23,7 @@
 #define EP_T   &ext_power EP_TOG
 #define EP_ON  &ext_power EP_ON
 #define EP_OF  &ext_power EP_OFF
-#define ESCT   &mt TILD ESC
+#define ESCT   &mt GRAVE ESC
 #define BRKTR  &mt RPAR RBKT
 #define BRKTL  &mt LPAR LBKT
 #define FN1    &mt F1 N1
