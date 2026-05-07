@@ -12,7 +12,7 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &kata0510_lily58_layout;
-        zmk,battery-reporting = &battery_reporting;
+//        zmk,battery-reporting = &battery_reporting;
     };
 
     default_transform: keymap_transform_0 {
