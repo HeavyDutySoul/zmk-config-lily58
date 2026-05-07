@@ -12,7 +12,7 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &kata0510_lily58_layout;
-//        zmk,battery-reporting = &battery_reporting;
+        zmk,battery-reporting = &battery_reporting;
     };
 
     default_transform: keymap_transform_0 {
@@ -41,21 +41,21 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
     };
 
     
-//    battery_reporting: battery_reporting {
-//        compatible = "zmk,battery-reporting";
-//
-//        dongle {
-//            hidden;
-//        };
-//        left {
-//            display-name = "Left";
-//            cpf = <0x010D>;
-//        };
-//        right {
-//            display-name = "Right";
-//            cpf = <0x010E>;
-//        };
-//    };
+    battery_reporting: battery_reporting {
+        compatible = "zmk,battery-reporting";
+
+        dongle {
+            hidden;
+        };
+        left {
+            display-name = "Left";
+            cpf = <0x010D>;
+        };
+        right {
+            display-name = "Right";
+            cpf = <0x010E>;
+        };
+    };
 };
 
 &kata0510_lily58_layout {
