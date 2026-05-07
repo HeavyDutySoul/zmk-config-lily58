@@ -21,32 +21,52 @@ include:
   - board: nrf52840dongle_nrf52840
     shield: lily58_dongle
     snippet: nrf52840-nosd studio-rpc-usb-uart
-    artifact-name: lily58_dongle_zmk
+    cmake-args: >-
+      -DCONFIG_ZMK_STUDIO=y
+      -DCONFIG_ZMK_STUDIO_LOCKING=n
+    artifact-name: lily58_dongle
   - board: nrf52840dongle_nrf52840
     shield: lily58_dongle
-    snippet: nrf52840-nosd studio-rpc-usb-uart cdc-acm-console
-    cmake-args: -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000 -DCONFIG_ZMK_LOG_LEVEL_DBG=y -DCONFIG_CBPRINTF_COMPLETE=y
-    artifact-name: lily58_dongle_zmk_log
+    snippet: nrf52840-nosd zmk-usb-logging
+    cmake-args: >-
+      -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
+      -DCONFIG_ZMK_LOG_LEVEL_DBG=y
+      -DCONFIG_CBPRINTF_COMPLETE=y
+      -DCONFIG_LOG_MAX_LEVEL=4
+    artifact-name: lily58_dongle_dbg
   - board: mikoto@6.1.0//zmk
     shield: lily58_left_central
-    snippet: nrf52840-nosd
-    cmake-args: -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
-    artifact-name: lily58_left_central_zmk
+    snippet: nrf52840-nosd studio-rpc-usb-uart
+    cmake-args: >-
+      -DCONFIG_ZMK_STUDIO=y
+      -DCONFIG_ZMK_STUDIO_LOCKING=n
+      -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
+    artifact-name: lily58_left_central
+  - board: mikoto@6.1.0//zmk
+    shield: lily58_left_central
+    snippet: nrf52840-nosd zmk-usb-logging
+    cmake-args: >-
+      -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
+      -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
+      -DCONFIG_ZMK_LOG_LEVEL_DBG=y
+      -DCONFIG_CBPRINTF_COMPLETE=y
+      -DCONFIG_LOG_MAX_LEVEL=4
+    artifact-name: lily58_left_central_dbg
   - board: mikoto@6.1.0//zmk
     shield: lily58_left_peripheral
     snippet: nrf52840-nosd
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
-    artifact-name: lily58_left_peripheral_zmk   
+    cmake-args: >-
+      -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n 
+      -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
+    artifact-name: lily58_left_peripheral
   - board: mikoto@6.1.0//zmk
     shield: lily58_right_peripheral
     snippet: nrf52840-nosd
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
-    artifact-name: lily58_right_peripheral_zmk
-  - board: mikoto@6.1.0//zmk
-    shield: settings_reset
-    snippet: nrf52840-nosd
-    artifact-name: lily58_settings_reset
+    cmake-args: >-
+      -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n 
+      -DCONFIG_BOARD_MIKOTO_CHARGER_CURRENT_40MA=y
+    artifact-name: lily58_right_peripheral
   - board: nrf52840dongle_nrf52840
     shield: settings_reset
-    artifact-name: lily58_dongle_settings_reset
     snippet: nrf52840-nosd
+    artifact-name: lily58_reset
