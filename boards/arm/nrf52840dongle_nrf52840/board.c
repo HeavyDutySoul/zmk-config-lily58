@@ -43,3 +43,35 @@ static int board_nrf52840dongle_nrf52840_init(void)
 
 SYS_INIT(board_nrf52840dongle_nrf52840_init, PRE_KERNEL_1,
 	 CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
+
+#if IS_ENABLED(CONFIG_PM_DEVICE)
+#include <zephyr/kernel.h>
+#include <zephyr/device.h>
+#include <zephyr/pm/device.h>
+
+static int dongle_pm_action(const struct device *dev, enum pm_device_action action)
+{
+	ARG_UNUSED(dev);
+	switch (action) {
+	case PM_DEVICE_ACTION_SUSPEND:
+		/* Prevent the USB dongle from entering System OFF.
+		 * The dongle must stay powered on to maintain USB connection
+		 * and receive BLE reconnections when peripherals wake up.
+		 */
+		return -EBUSY;
+	default:
+		return 0;
+	}
+}
+
+static int dongle_pm_init(const struct device *dev)
+{
+	ARG_UNUSED(dev);
+	return 0;
+}
+
+PM_DEVICE_DEFINE(dongle_pm, dongle_pm_action);
+DEVICE_DEFINE(dongle_pm_dev, "dongle_pm", dongle_pm_init, PM_DEVICE_GET(dongle_pm),
+	      NULL, NULL, POST_KERNEL, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT, NULL);
+#endif
+
