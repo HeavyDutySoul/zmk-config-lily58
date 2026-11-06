@@ -1,0 +1,34 @@
+/*
+ * Copyright (c) 2020 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "lily58.dtsi"
+
+/ {
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&kscan0>;
+    };
+
+    soft_off_plus_wake: soft_off_plus_wake {
+        compatible = "zmk,soft-off-plus-wake";
+        wake-gpios   = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; /* Row 1 (Home row) */
+        strobe-gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH>;                   /* Index Col (F on Left, J on Right) */
+        wake-hold-ms = <1000>;
+        bypass-on-usb;
+    };
+};
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 19 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 16 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 10 GPIO_ACTIVE_HIGH>
+        ;
+
+};
