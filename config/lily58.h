@@ -46,7 +46,7 @@
 #define COMBO(name, keypress, keypos) \
 combo_##name {                        \
     layers = <0 4>;                     \
-    timeout-ms = <100>;                \
+    timeout-ms = <50>;                \
     bindings = <keypress>;            \
     key-positions = <keypos>;         \
 };
